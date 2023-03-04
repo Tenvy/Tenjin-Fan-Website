@@ -3,6 +3,8 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import arrowright from '../assets/arrow-right.svg'
 import arrowleft from '../assets/arrow-left.svg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const SingleCard = (props) => {
   const responsive = {
@@ -12,7 +14,11 @@ export const SingleCard = (props) => {
   const items = props.herodata.map((res, key) => {
     return (
       <div key={key} className="item">
-        <img className="rounded-md" src={res} alt="" />
+        <LazyLoadImage
+          effect="blur"
+          className="rounded-md"
+          src={res}
+          alt="images" />
       </div>
     );
   });

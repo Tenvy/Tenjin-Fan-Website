@@ -1,5 +1,7 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ModalCard = (props) => {
     const {focusedProduct,setFocusedProduct} = props
@@ -78,7 +80,7 @@ export const ModalCard = (props) => {
         <div className='flex gap-3 flex-col md:flex-row'>
           <div className=' md:w-[50%]'>
             <div className='flex justify-center'>
-              <img width={400} src={focusedProduct.imgurl[0]} alt="" />
+              <LazyLoadImage effect="blur" width={400} src={focusedProduct.imgurl[0]} alt="" />
             </div>
             <div className='flex justify-center'>
               <a href={focusedProduct.url} className='flex border py-2 px-3 my-4 hover:text-gray-500'>

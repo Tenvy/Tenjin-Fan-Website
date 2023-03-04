@@ -3,6 +3,8 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import arrowright from '../assets/arrow-right.svg'
 import arrowleft from '../assets/arrow-left.svg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const CardList = (props) => {
   const responsive = {
@@ -15,7 +17,7 @@ export const CardList = (props) => {
     return (
       <div key={res.id}>
         <div onClick={() => props.setFocusedProduct(res)} className='item w-[33vh] max-[280px]:w-[30vh] md:w-[40vh] mx-auto hover:bg-white rounded hover:bg-opacity-25 p-2 cursor-pointer'>
-          <img className='' width={300} height={300} src={res.imgurl[0]} alt="" />
+          <LazyLoadImage effect='blur' className='' width={300} height={300} src={res.imgurl[0]} alt="" />
           <h1 className='font-bold text-xl md:text-2xl'>{res.name}</h1>
           <h1 className='font-bold text-lg md:text-xl'>{res.price}</h1>
         </div>
