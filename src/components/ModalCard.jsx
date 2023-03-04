@@ -76,7 +76,7 @@ export const ModalCard = (props) => {
       </Modal.Header>
       <Modal.Body>
         <div className='flex gap-3 flex-col md:flex-row'>
-          <div className='w-full md:w-[50%]'>
+          <div className=' md:w-[50%]'>
             <div className='flex justify-center'>
               <img width={400} src={focusedProduct.imgurl[0]} alt="" />
             </div>
