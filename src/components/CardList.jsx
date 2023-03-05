@@ -16,7 +16,7 @@ export const CardList = (props) => {
   const items = props.product.map((res) => {
     return (
       <div key={res.id}>
-        <div onClick={() => props.setFocusedProduct(res)} className='item w-[33vh] max-[280px]:w-[30vh] md:w-[40vh] mx-auto hover:bg-white rounded hover:bg-opacity-25 p-2 cursor-pointer'>
+        <div onClick={() => props.setFocusedProduct(res)} className='item mx-4 hover:bg-white rounded hover:bg-opacity-25 p-2 cursor-pointer'>
           <LazyLoadImage effect='blur' className='' src={res.imgurl[0]} alt="" />
           <h1 className='font-bold text-xl md:text-2xl'>{res.name}</h1>
           <h1 className='font-bold text-lg md:text-xl'>{res.price}</h1>

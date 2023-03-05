@@ -11,7 +11,6 @@ export const imgData = async () => {
 export const productData = async () => {
     const productdata = await axios.get(`${endpoint}`)
     const productresult = await productdata.data.record.data.product
-    console.log(productresult);
     return productresult
 }
 
