@@ -1,5 +1,7 @@
 # Tenjin Fan Website
 
+Deployed ver: https://tenjinstyle.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 i noticed that this website is not very responsive on some devices :( i'll fix this old project soon as im not busy
